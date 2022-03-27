@@ -3,11 +3,29 @@
 }
 
 /* carrito */
-.badge text-black ms-1 rounded-pill{
+.badge .text-black .ms-1 .rounded-pill{
   border: 3px;
   margin: 10px;
   background-color: white;
 }
+/* navbar */
+.navbar-brand {
+  color: black;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+/* .columnas {
+	color: black; 
+	background-color: red;
+	background: linear-gradient(red, beige);
+}  */
 
 .App-logo {
   height: 40vmin;
