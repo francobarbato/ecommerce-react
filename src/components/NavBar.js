@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Cart from './Carrito';
 
 function NavBar() {
     return(
@@ -24,6 +25,7 @@ function NavBar() {
                 </li>
                 </ul>
             </div>
+            <Cart/>
         </nav>
         </>
     );

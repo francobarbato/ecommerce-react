@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+/* carrito */
+.badge text-black ms-1 rounded-pill{
+  border: 3px;
+  margin: 10px;
+  background-color: white;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
