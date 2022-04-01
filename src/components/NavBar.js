@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cart from './Carrito';
-import ItemListContainer from './ItemListContainer';
 
 function NavBar() {
     return(
@@ -25,7 +24,6 @@ function NavBar() {
             </div>
             <Cart/>
         </nav>
-        <ItemListContainer/>
         </>
     );
 }
