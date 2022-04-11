@@ -7,9 +7,8 @@ function App() {
     <>
       <NavBar />
       <h2>Cascos</h2>
-      <div className='tarjeta'>
-        <ItemListContainer marca="shred" color="negro" cantidad="unidades disponbles:" stock="5"/>
-      </div>
+      <hr></hr>
+        <ItemListContainer/>
     </>
   );
 }

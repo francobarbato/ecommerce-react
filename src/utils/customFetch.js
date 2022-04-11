@@ -1,16 +1,12 @@
+// import { data } from "./products";
 
-let is_stock = true;
 
-let customFetch = (timeout, task) => {
-    return new Promise((resolve, reject) => {
-        setTimeout (() => {
-            if(is_stock){
-                resolve(task)
-            }else{
-                reject("error")
-            }
-        }, time);
-    });
-}
+// let customFetch = () => {
+//     return new Promise((resolve, reject)=> {
+//         setTimeout(() => {
+//             return resolve(data);
+//         }, 5000)
+//     })
+// }
 
-export default customFetch; 
+// export default customFetch; 
