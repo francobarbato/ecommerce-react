@@ -1,7 +1,7 @@
 import React from 'react';
+import ItemCount from './ItemCount';
 
-export default function Item({id, name, cost, description, image, stock}) {
-    // console.log(id, name, cost, description, image, stock)
+export default function ItemDetail({ id, name, image, cost, description, stock}) {
     return(
         <>
         <div className='cards' key={id} >
@@ -10,6 +10,7 @@ export default function Item({id, name, cost, description, image, stock}) {
             <p>${cost}</p>
             <p>{description}</p>
             <p>Unidades disponibles:{stock}</p>
+            {/* <ItemCount/> */}
         </div>
         </>
     )

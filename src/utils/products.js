@@ -6,7 +6,9 @@ const data = [
         cost: 1480,
         description: "Casco de esqui azul",
         capacity: 100,
-        image: "./components/imagenes/shred1.jpg",
+        image: {
+            url:"https://cdn.shopify.com/s/files/1/2375/4447/products/HETTNK18_00_500x.jpg?v=1645109006",
+        }
     },
     {
         id: 2,
@@ -15,7 +17,9 @@ const data = [
         cost: 1500,
         description: "...",
         capacity: 100,
-        image: "...",
+        image: {
+            url:"https://cdn.shopify.com/s/files/1/2375/4447/products/HESCNK17_00_1648abc3-be72-4a7f-b8f0-b5324d428da1_500x.jpg?v=1645065342",
+        }
     },
 ];
 

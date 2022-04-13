@@ -1,11 +1,11 @@
 import React from 'react';
-import ItemCount from './ItemCount';
+// import ItemCount from './ItemCount';
 import { useEffect, useState } from 'react'
 import { getData } from '../utils/products';
 import ItemList from './ItemList'
 
 const ItemListContainer = () => {
-    const [datos, setDatos] = useState([]);
+    const [datos, setDatos] = useState();
 
     useEffect(() => {
         async function pedirDatos() {
@@ -15,7 +15,7 @@ const ItemListContainer = () => {
         pedirDatos()
     },[]);
 
-    console.log(datos)
+    // console.log(datos)
 
     return(
         <>
