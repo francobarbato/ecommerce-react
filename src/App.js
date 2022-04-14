@@ -10,7 +10,7 @@ function App() {
       <h2>Cascos</h2>
       <hr></hr>
         {/* <ItemListContainer/> */}
-        {/* <ItemDetailContainer/> */}
+        <ItemDetailContainer/>
     </>
   );
 }

@@ -9,8 +9,8 @@ const ItemDetailContainer = () => {
 
     const pedirDatos = async () =>{
         const datosLlegando = await getData();
-        const filter = datosLlegando.filter(item=> item.id === 1)
-        setDatos(filter)
+        const elemento = datosLlegando.shift()
+        setDatos(elemento)
     }
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
 
 
     return(
-        <ItemDetail productos={datos}/>
+        <ItemDetail dato={datos}/>
     );
 }
 

@@ -3,12 +3,12 @@ import ItemCount from './ItemCount';
 
 export default function ItemDetail({dato}) {
 
-    const  {  id, name, image, cost, description, stock } = dato[0]
+    const  {  id, name, image, cost, description, stock } = dato
 
     return(
         <>
         <div className='cards' key={id} >
-           {/* <img src={image.url} alt="" className="img"/> */}
+           <img src={image} alt="" className="img"/>
             <p>{name}</p>
             <p>${cost}</p>
             <p>{description}</p>
