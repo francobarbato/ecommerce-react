@@ -7,13 +7,21 @@ const ItemDetailContainer = () => {
 
     const [datos, setDatos] = useState([]);
 
+    const pedirDatos = async () =>{
+        const datosLlegando = await getData();
+        const filter = datosLlegando.filter(item=> item.id === 1)
+        setDatos(filter)
+    }
+
     useEffect(() => {
-        async function pedirDatos() {
-            let datosLlegando = await getData();
-            setDatos(datosLlegando)
-        }
+        // async function pedirDatos() {
+        //     let datosLlegando = await getData();
+        //     setDatos(datosLlegando)
+        // }
         pedirDatos()
     },[]);
+
+
 
 
     return(
@@ -21,6 +29,6 @@ const ItemDetailContainer = () => {
     );
 }
 
-export default ItemDetailContainer();
+export default ItemDetailContainer;
 
 
