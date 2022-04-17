@@ -1,27 +1,23 @@
 import { useEffect, useState } from "react";
 import { getData } from "../utils/products";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 
 const ItemDetailContainer = () => {
 
     const [datos, setDatos] = useState([]);
-
-    const pedirDatos = async () =>{
-        const datosLlegando = await getData();
-        const elemento = datosLlegando.shift()
-        setDatos(elemento)
-    }
+    const {idItem} = useParams();
 
     useEffect(() => {
-        // async function pedirDatos() {
-        //     let datosLlegando = await getData();
-        //     setDatos(datosLlegando)
-        // }
-        pedirDatos()
-    },[]);
-
-
+        const pidiendoDatos = async () =>{
+                    const llegadaDatos = await getData();
+                    const elemento = llegadaDatos.filter(item => item.id == idItem)
+                    setDatos(elemento)
+                }
+                pidiendoDatos()
+        console.log(idItem)
+    },[idItem]);
 
 
     return(

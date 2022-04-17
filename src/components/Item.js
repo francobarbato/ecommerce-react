@@ -1,16 +1,13 @@
-// import React from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-// export default function Item({id, name, cost, description, image, stock}) {
-//     // console.log(id, name, cost, description, image, stock)
-//     return(
-//         <>
-//         <div className='cards' key={id} >
-//            <img src={image.url} alt="" className="img"/>
-//             <p>{name}</p>
-//             <p>${cost}</p>
-//             <p>{description}</p>
-//             <p>Unidades disponibles:{stock}</p>
-//         </div>
-//         </>
-//     )
-// }
+export default function Item({id, image}) {
+    return(
+        <>
+        <div className='cards' key={id} >
+           <img src={image} alt="" className="img"/>
+            <p><Link to='/item/id'>detalles</Link></p>
+        </div>
+        </>
+    )
+}
