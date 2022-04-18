@@ -3,11 +3,13 @@ import ItemCount from './ItemCount';
 
 export default function ItemDetail({dato}) {
 
-    const  {  id, name, image, cost, description, stock } = dato
+    const  { name, image, cost, description, stock } = dato
+
+    // console.log(dato)
 
     return(
         <>
-        <div className='cards' key={id} >
+        <div className='cards'>
            <img src={image} alt="" className="img"/>
             <p>{name}</p>
             <p>${cost}</p>

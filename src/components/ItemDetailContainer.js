@@ -12,11 +12,11 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         const pidiendoDatos = async () =>{
                     const llegadaDatos = await getData();
-                    const elemento = llegadaDatos.filter(item => item.id == idItem)
+                    const elemento = llegadaDatos.find(item => item.id === parseInt(idItem))
                     setDatos(elemento)
                 }
                 pidiendoDatos()
-        console.log(idItem)
+        console.log(datos)
     },[idItem]);
 
 
