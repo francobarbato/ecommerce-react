@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Cart from './Carrito';
+import Cart from './CartWidget';
 import { Link } from 'react-router-dom'
 
 // corregir etiqueta a y link
@@ -25,7 +25,7 @@ function NavBar() {
                 </li>
                 </ul>
             </div>
-            <Cart/>
+            <Link to='/Cart'><Cart/></Link>
         </nav>
         </>
     );
