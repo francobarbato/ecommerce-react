@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Link, Button } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from './CartContext';
 import ItemCount from './ItemCount';
 
 export default function ItemDetail({ dato }) {
@@ -8,10 +9,12 @@ export default function ItemDetail({ dato }) {
 
     const [itemCount, setItemCount ] = useState(0);
 
+    const test = useContext(CartContext)
+
     const agregar = (qty) => {
-        alert("seleccionaste" + qty + "productos");
-        setItemCount(qty)
-        console.log(qty)
+        alert("seleccionaste " + qty + " productos");
+        setItemCount(qty);
+        test.addToCart(item);
     }
 
     return(
@@ -21,12 +24,10 @@ export default function ItemDetail({ dato }) {
             <p>{name}</p>
             <p>${cost}</p>
             <p>{description}</p>
-            <p>Unidades disponibles:{stock}</p>
-            {/* sobre escribir lo que esta en item count para usar el boton y crear el componente para el boton carrito */}
             {
                 itemCount === 0
-             ? <ItemCount stock={stock} initial={itemCount} onClick={agregar} />
-             : <Link to='/Cart'>ver en el cart</Link>   
+             ? <ItemCount stock={stock} initial={itemCount} onAdd={agregar} />
+             : <Link to='/Cart'><button type="button" class="btn btn-warning">ver en el cart</button></Link>
             }
             
         </div>

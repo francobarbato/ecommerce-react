@@ -1,7 +1,7 @@
 import React from 'react';
 import foto from './imagenes/carrito.png';
 
-function Cart() {
+function CartWidget() {
     return(
         <>
             <button type="button"  className="badge text-black ms-1 rounded-pill" data-toggle="modal" data-target="#exampleModal">
@@ -12,4 +12,4 @@ function Cart() {
     );
 }
 
-export default Cart;
+export default CartWidget;

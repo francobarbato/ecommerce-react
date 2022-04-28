@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Cart from './CartWidget';
+import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom'
 
 // corregir etiqueta a y link
@@ -18,14 +18,14 @@ function NavBar() {
                     <Link to='/' className="nav-link" href="#">Inicio<span className="sr-only"></span></Link>
                 </li>
                 <li className="nav-item">
-                    <Link to='/category/8' className="nav-link" href="#">Esquies</Link>
+                    <Link to='/category/8' className="nav-link" href="#">Antiparras</Link>
                 </li>
                 <li className="nav-item">
                     <Link to='/category/9' className="nav-link" href="#">Cascos</Link>
                 </li>
                 </ul>
             </div>
-            <Link to='/Cart'><Cart/></Link>
+            <Link to='/Cart'><CartWidget/></Link>
         </nav>
         </>
     );
