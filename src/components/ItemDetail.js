@@ -7,14 +7,20 @@ export default function ItemDetail({ dato }) {
 
     const  { name, image, cost, description, stock } = dato
 
-    const [itemCount, setItemCount ] = useState(0);
+    const [itemCount, setItemCount ] = useState(1);
+    const [finish, setFinish] = useState(false)
 
-    const test = useContext(CartContext)
+    const terminar = () => {
+        setFinish(true)
+    } 
 
-    const agregar = (qty) => {
-        alert("seleccionaste " + qty + " productos");
-        setItemCount(qty);
-        test.addToCart(item);
+    const { onAdd } = useContext(CartContext)
+
+// ver lo de item no declarado 
+
+    const agregar = () => {
+
+        onAdd({...dato, itemCount});
     }
 
     return(
@@ -25,9 +31,12 @@ export default function ItemDetail({ dato }) {
             <p>${cost}</p>
             <p>{description}</p>
             {
-                itemCount === 0
-             ? <ItemCount stock={stock} initial={itemCount} onAdd={agregar} />
-             : <Link to='/Cart'><button type="button" class="btn btn-warning">ver en el cart</button></Link>
+                !finish &&
+                <ItemCount stock={stock} initial={itemCount} cantidad={setItemCount} terminar={terminar} />
+            }
+            {
+                finish &&
+                <Link to='/Cart' type="button" className="btn btn-warning" onClick={agregar}>Ver en el carrito</Link>
             }
             
         </div>

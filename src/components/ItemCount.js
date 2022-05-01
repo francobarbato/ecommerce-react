@@ -1,9 +1,9 @@
 import {useState} from 'react';
 
-function ItemCount({stock=1 , initial=0, onAdd}){
+function ItemCount({stock, initial, cantidad, terminar}){
     // poner cantidad seleccionada de productos
 
-    const [unidades, setUnidades]= useState(0);
+    const [unidades, setUnidades]= useState(initial);
 
     const increment = () =>{
         if(unidades < stock){
@@ -25,11 +25,11 @@ function ItemCount({stock=1 , initial=0, onAdd}){
             <option className="box">{unidades}</option>
             <button  type="button" className="btn btn-primary" onClick={decrement}>-</button>
             <div>
-                {
-                    stock && unidades
-                ? <button onClick={() => onAdd(unidades)} >agregar al carrito</button>
-                : <button type="button" class="btn btn-info">Agregar al Carrito</button>   
-                }
+                 <button onClick={() => {
+                    terminar() 
+                    cantidad(unidades) 
+                }} class="btn btn-info">
+                    Agregar al carrito</button> 
             </div>
         </div>
         </>

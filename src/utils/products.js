@@ -87,7 +87,7 @@ const data = [
 
     },
 ];
-
+// poner el tiempo de carga
 export const getData = () => {
     return new Promise((resolve, reject)=> {
         setTimeout(() => {
