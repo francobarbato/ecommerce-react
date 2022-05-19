@@ -16,8 +16,6 @@ export default function ItemDetail({ dato }) {
 
     const { onAdd } = useContext(CartContext)
 
-// ver lo de item no declarado 
-
     const agregar = () => {
 
         onAdd({...dato, itemCount});
